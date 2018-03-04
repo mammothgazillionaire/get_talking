@@ -70,9 +70,7 @@ mongoose.connect(uri,
         poolSize: 2,
         promiseLibrary: global.Promise
     }
-).then(function () {
-    console.log("connected");
-});
+)
 
 // If the connection throws an error
 mongoose.connection.on('error',function (err) {
