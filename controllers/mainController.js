@@ -9,6 +9,7 @@
                 isLogged : false,
                 name : ""
             });
+            
         };
 
     };
