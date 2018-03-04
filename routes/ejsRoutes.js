@@ -14,7 +14,7 @@
         mainController.init(app);
         middleware.init(app);
 
-        app.get( '/', mainController.renderIndex);
+        app.get( '/', mainController.renderIndex);  
 
     }
 })(module.exports);
