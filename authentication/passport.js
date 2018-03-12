@@ -2,10 +2,10 @@
 // var log = require('../config/logger').log;
 var LocalStrategy = require('passport-local').Strategy;
 var GoogleStrategy   = require('passport-google-oauth2');
-// var async = require('async');
+var async = require('async');
 // const util = require('util');
 // var services = require('./services').emitter;
-// var User       = require('./models/user');
+var User       = require('../models/user');
 module.exports = function(passport) {
     // =========================================================================
     // passport session setup ==================================================
@@ -113,9 +113,6 @@ module.exports = function(passport) {
                             newUser.name.firstName    = req.body.firstName;
                             newUser.name.lastName    = req.body.lastName;
                             newUser.mobile    = req.body.mobile;
-                            newUser.defaultRole = 'Student';
-                            newUser.activeRole = 'Student';
-                            newUser.imageLink = '/teachers/profile_sample.jpg';
                             newUser.password = newUser.generateHash(password);
 
 
@@ -129,13 +126,6 @@ module.exports = function(passport) {
                                             console.log("new user created");
                                             callback(null,  false, 'You have successfully registered, please login.');
                                         }, 100);
-                                    },
-                                    function(callback) {
-                                        setTimeout(function() {
-                                            services.emit("createZoomUser", email);
-                                            console.log("new zoom user created");
-                                            callback(null, 'zoom user created');
-                                        }, 200);
                                     }
                                 ],
                                 // optional callback
@@ -181,13 +171,6 @@ module.exports = function(passport) {
                                             console.log("new user created");
                                             callback(null, false, 'You have successfully registered, please login.');
                                         }, 100);
-                                    },
-                                    function(callback) {
-                                        setTimeout(function() {
-                                            services.emit("createZoomUser", email);
-                                            console.log("new zoom user created");
-                                            callback(null, 'zoom user created');
-                                        }, 200);
                                     }
                                 ],
                                 // optional callback
