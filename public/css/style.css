@@ -3,7 +3,7 @@
 *::after {
   margin: 0px;
   padding: 0px;
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
@@ -11,11 +11,11 @@ html {
 body {
   font-family: "Lato" , sans-serif;
   font-weight: 400;
-  /* font-size:16px; */
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  box-sizing: border-box; }
+  /* font-size:16px; */
+   }
 
   #myVideo {
     position: fixed;
@@ -25,6 +25,8 @@ body {
     min-height: 100%;
 }
 
+
+
 /*.header {
   height: 100vh;
   position: relative;
@@ -33,17 +35,23 @@ body {
   background-position: top;
    }
 */
+
+
 .header__logo-box {
   position: absolute;
-  top: 4rem;
-  left: 4rem; }
+  top: 15rem;
+  left: 76rem; 
+  z-index: 100;
+}
 
 .header__logo {
-  height: 3.5rem; }
+  width: 22.5rem; 
+  height: auto;
+}
 
 .header__text-box {
   position: absolute;
-  top: 40%;
+  top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; }
@@ -71,6 +79,142 @@ body {
   animation-name: moveInRight;
   animation-duration: 1s;
   animation-timing-function: ease-out; }
+
+  .main-nav{
+    float:right;
+    font-size:20px;
+    font-weight: 600;
+    position: relative;
+    list-style: none;
+    margin-top:25px;
+    margin-right: 35px;
+    z-index: 3000;
+  }
+  .main-nav li{
+    display: inline-block;
+    text-decoration: none;
+    margin-left:20px;
+  }
+  .main-nav li a:link,
+  .main-nav li a:visited{
+    padding:8px 0px;
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .9em;
+    border: 2px solid transparent;
+    transition: border-bottom 0.2s;
+  }
+  .main-nav li a:hover,
+  .main-nav li a:active{
+    border-bottom: 2px solid #e7d9ce;
+  }
+
+  .popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .popup:target {
+    opacity: 1;
+    visibility: visible;
+    animation-name: conditionalOpen ;
+  animation-duration: .4s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  }
+  
+  body{
+    margin: 0 ;
+    padding: 0;
+    font-family: sans-serif;   
+   }
+   
+   .box {
+   
+       position: absolute;
+       top: 50% ;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       width: 400px;
+       padding: 40px;
+       background: rgba(5, 39, 39, 0.8);
+       box-sizing: border-box;
+       box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+       border-radius: 5px;
+     }
+
+     
+     .box h2 {
+     
+       margin: 0 0 30px;
+       padding: 0 ;
+       color: #fff;
+       text-align: center;
+     
+     }
+     
+     .box .inputbox  {
+       position: relative;
+     }
+     
+     .box .inputbox input {
+     width: 100%;
+     padding: 10px 0;
+     font-size: 16px;
+     color: #fff;
+     margin-bottom: 30px;
+     border: none;
+     border-bottom: 1px solid #fff;
+     outline: none;
+     background: transparent;
+     
+     }
+     
+     .box .inputbox label {
+     
+       position: absolute;
+       top: 0;
+       left: 0;
+       padding: 10px 0;
+       font-size: 16px;
+       color: #fff;
+       pointer-events: none;
+       transition: 0.5s;
+     
+     }
+     
+     .box .inputbox input:focus ~ label,
+     .box .inputbox input:valid ~ label {
+     
+       top: -20px;
+       left: 0;
+       color: #03a9f4;
+       font-size: 12px;
+     
+     }
+     
+      .box input[type="submit"] {
+     
+       background: transparent;
+       outline: none;
+       border: none;
+       color: #fff;
+       background: #03a9f4;
+       padding: 10px 20px;
+       cursor: pointer;
+       border-radius: 5px;
+      }
 
 @keyframes moveInLeft {
   0% {
@@ -100,16 +244,24 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+    @keyframes conditionalOpen {
+      from { transform: scaleY(0) }
+      to { transform: scaleY(1) }
+  }
+
+    
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
+  font-weight: 600;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1.2rem 4rem;
   display: inline-block;
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.5rem; }
 
 .btn:hover {
   transform: translateY(-3px);

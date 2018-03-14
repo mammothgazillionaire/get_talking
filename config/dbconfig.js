@@ -1,4 +1,4 @@
 module.exports = {
-    uri : 'mongodb://localhost/local_db'
+    uri : 'mongodb://localhost:27017'
 
 }
