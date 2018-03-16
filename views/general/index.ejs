@@ -7,29 +7,94 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="css/icon-font.css">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Get Talking</title>
     </head>
     <body>
-        <header class="header">
-            <div class="header__logo-box">
-                <img src="img/logo-white.png" alt="Logo" class="header__logo">
-            </div>
-            <video autoplay muted loop id="myVideo">
-                <source src="img/taj.mp4" type="video/mp4">
-              </video>
-            <div class="header__text-box">
-                    <h1 class="heading-primary">
-                            <span class="heading-primary--main">Get Talking</span>
-                            <span class="heading-primary--sub">Ask Anything You Like </span>
-                        </h1>
-
-                        <a href="#" class="btn btn--white btn--animated">Join Here</a>
-
-            </div>
             
-        </header>
+            <nav class= "main-nav">
+                    <ul>
+                        <li><a href="#Signin-form">SIGN IN </a></li>
+                        <li><a href="#Registration-form">REGISTER</a></li>
+                    </ul>
+                </nav>
+
+            <header class="header">
+            <div class="header__logo-box">
+            <img src="img/gt.png" alt="Logo" class="header__logo">
+            </div>
+           
+            <video autoplay muted loop id="myVideo">
+                 <source src="img/taj.mp4" type="video/mp4">
+            </video>
+            
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Get Talking</span>
+                    <span class="heading-primary--sub">Ask Anything You Like </span>
+                </h1>
+
+                <a href="#" class="btn btn--white btn--animated">Join Here</a>
+            </div>
+
+            </header>
+
+
+            <div id="Signin-form" class="popup">
+                    <div class="popup__content">
+                    <div class="box">
+                        <h2>SIGN IN</h2>
+                            <form>
+                                <div class="inputbox">
+                                    <input type="text" name="Username" required=""0 >
+                                    <label for="Username">Username</label>  
+                                </div>
+                                <div class="inputbox">
+                                    <input type="Password" name="Password" required="" minlength="6" maxlength="16">
+                                    <label for="Password">Password</label>
+                                </div>
+                            </form>
+                                
+                    </div>
+                    </div>
+                </div>
+
+            <div id="Registration-form" class="popup">
+                <div class="popup__content">
+                <div class="box">
+                    <h2>SIGN UP</h2>
+                        <form>
+                            <div class="inputbox">
+                                <input type="text" name="First Name" required=""0>
+                                <label for="Firstname">First Name</label>  
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" name="Last Name" required=""0>
+                                <label for="Lastname">Last Name</label>  
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" name="Username" required=""0 >
+                                <label for="Username">Username</label>  
+                            </div>
+                            <div class="inputbox">
+                                <input type="Password" name="Password" required="" minlength="6" maxlength="16">
+                                <label for="Password">Password</label>
+                            </div>
+                            <div class="inputbox">
+                                <input type="Password" name="Password" required="" minlength="6" maxlength="16">
+                                <label for="Confirm password">Confirm password</label>
+                            </div>
+                            <div class="inputbox">
+                                <input type="email" name="Email" required="">
+                                <label for="email">Email</label>
+                                <input type="submit" name="" value="submit">
+                            </div>
+                        </form>
+                            
+                </div>
+                </div>
+            </div>
     </body>
 </html>
