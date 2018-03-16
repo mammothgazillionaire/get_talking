@@ -8,6 +8,7 @@
 
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" href="scripts/scripts.js"></script>
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Get Talking</title>
@@ -16,8 +17,8 @@
             
             <nav class= "main-nav">
                     <ul>
-                        <li><a href="#Signin-form">SIGN IN </a></li>
-                        <li><a href="#Registration-form">REGISTER</a></li>
+                        <li><a href="#login_Form">SIGN IN </a></li>
+                        <li><a href="#registration_Form">REGISTER</a></li>
                     </ul>
                 </nav>
 
@@ -42,11 +43,11 @@
             </header>
 
 
-            <div id="Signin-form" class="popup">
+            <div id="login_Form" class="popup">
                     <div class="popup__content">
                     <div class="box">
                         <h2>SIGN IN</h2>
-                            <form>
+                            <form id="loginForm">
                                 <div class="inputbox">
                                     <input type="text" name="Username" required=""0 >
                                     <label for="Username">Username</label>  
@@ -61,35 +62,35 @@
                     </div>
                 </div>
 
-            <div id="Registration-form" class="popup">
+            <div id="registration_Form" class="popup">
                 <div class="popup__content">
                 <div class="box">
                     <h2>SIGN UP</h2>
-                        <form>
+                        <form id="registrationForm">
                             <div class="inputbox">
-                                <input type="text" name="First Name" required=""0>
-                                <label for="Firstname">First Name</label>  
+                                <input type="text" name="firstName" required=""0>
+                                <label for="firstname">First Name</label>
                             </div>
                             <div class="inputbox">
-                                <input type="text" name="Last Name" required=""0>
-                                <label for="Lastname">Last Name</label>  
+                                <input type="text" name="lastName" required=""0>
+                                <label for="lastname">Last Name</label>
                             </div>
                             <div class="inputbox">
-                                <input type="text" name="Username" required=""0 >
-                                <label for="Username">Username</label>  
-                            </div>
-                            <div class="inputbox">
-                                <input type="Password" name="Password" required="" minlength="6" maxlength="16">
-                                <label for="Password">Password</label>
-                            </div>
-                            <div class="inputbox">
-                                <input type="Password" name="Password" required="" minlength="6" maxlength="16">
-                                <label for="Confirm password">Confirm password</label>
-                            </div>
-                            <div class="inputbox">
-                                <input type="email" name="Email" required="">
+                                <input type="text" name="email" required=""0 >
                                 <label for="email">Email</label>
-                                <input type="submit" name="" value="submit">
+                            </div>
+                            <div class="inputbox">
+                                <input type="Password" name="password" required="" minlength="6" maxlength="16">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="inputbox">
+                                <input type="Password" name="confirmPassword" required="" minlength="6" maxlength="16">
+                                <label for="confirmPassword">Confirm password</label>
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" name="mobile" required="">
+                                <label for="mobile">Phone Number</label>
+                                <input type="submit" name="">
                             </div>
                         </form>
                             
