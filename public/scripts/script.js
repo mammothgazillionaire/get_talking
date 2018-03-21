@@ -26,7 +26,6 @@ $(function(){
 // Signup
 $(function(){
     $('#registrationForm').on('submit', function(e) {
-        console.log("here");
         e.preventDefault();
 
         var data =  $(this).serialize();
@@ -43,7 +42,7 @@ $(function(){
                     $('.login-swap').addClass('active-swap');
                     $('.signup-swap').removeClass('active-swap');
                     $('.login-signup-form-wrapper').fadeIn(300);
-                    var message = "<div id=\"signupSuccesMsg\" style=\"text-align: center;color: green;font-size: small;margin-bottom: 10px;\">" + result + "</div>";
+                    var message = "<div id=\"signupSuccessMsg\" style=\"text-align: center;color: green;font-size: small;margin-bottom: 10px;\">" + result + "</div>";
                     $('#signupMessage').html(message);
                 }else{
                     var message = "<div id=\"signupErrorMsg\" style=\"text-align: center;color: red;font-size: small;margin-bottom: 10px;\">" + result + "</div>";
