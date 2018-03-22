@@ -110,29 +110,6 @@ body {
     border-bottom: 2px solid #e7d9ce;
   }
 
-  .popup {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left:0;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2000;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .popup:target {
-    opacity: 1;
-    visibility: visible;
-    animation-name: conditionalOpen ;
-  animation-duration: .4s; 
-  animation-timing-function: ease-out; 
-  animation-delay: 0;
-  animation-direction: alternate;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  }
   
   body{
     margin: 0 ;
@@ -168,7 +145,7 @@ body {
        position: relative;
      }
      
-     .box .inputbox input {
+     .box .inputbox input{
      width: 100%;
      padding: 10px 0;
      font-size: 16px;
@@ -180,6 +157,13 @@ body {
      background: transparent;
      
      }
+
+     input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
      
      .box .inputbox label {
      
@@ -216,6 +200,53 @@ body {
        border-radius: 5px;
       }
 
+      
+  .popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    
+  }
+  
+  .popup:target {
+  opacity: 1;
+  visibility: visible;
+  animation-name: conditionalOpen ;
+  animation-duration: .4s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  
+  }
+
+.close_button:link,
+.close_button:visited{
+  color:#fff;
+  position: absolute;
+  top: 1rem;
+  left: 11.5em;
+  z-index:8000;
+  font-size: 3rem;
+  font-weight: 100;
+  text-decoration: none;
+  animation-name: closeWindow ;
+  animation-duration: .4s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}   
+
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -248,8 +279,12 @@ body {
       from { transform: scaleY(0) }
       to { transform: scaleY(1) }
   }
-
-    
+ 
+  @keyframes closeWindow {
+    from { transform: scaleY(1) }
+    to { transform: scaleY(0) }
+}
+ 
 
 .btn:link,
 .btn:visited {
