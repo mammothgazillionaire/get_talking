@@ -11,6 +11,7 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Get Talking</title>
+        
     </head>
     <body>
             
@@ -32,7 +33,7 @@
             
             <div class="header__text-box">
                 <h1 class="heading-primary">
-                    <span class="heading-primary--main">Get Talking</span>
+                    <span class="heading-primary--main" id="Homepage">Get Talking</span>
                     <span class="heading-primary--sub">Ask Anything You Like </span>
                 </h1>
 
@@ -47,6 +48,7 @@
                     <div class="box">
                         <h2>SIGN IN</h2>
                             <form id="loginForm">
+                                <a href="#Homepage" class="close_button">&times;</a>
                                 <div class="inputbox">
                                     <input type="text" name="Username" required=""0 >
                                     <label for="Username">Username</label>  
@@ -54,6 +56,7 @@
                                 <div class="inputbox">
                                     <input type="Password" name="Password" required="" minlength="6" maxlength="16">
                                     <label for="Password">Password</label>
+                                    <input type="submit" name="">
                                 </div>
                             </form>
                                 
@@ -65,18 +68,22 @@
                 <div class="popup__content">
                 <div class="box">
                     <h2>SIGN UP</h2>
+
+                        <form id="registrationForm" autocomplete="off">
+
                     <div id="signupMessage"></div>
                         <form id="registrationForm">
+
                             <div class="inputbox">
-                                <input type="text" name="firstName" required=""0>
+                                <input type="text" name="firstName" required="" autocomplete="off">
                                 <label for="firstname">First Name</label>
                             </div>
                             <div class="inputbox">
-                                <input type="text" name="lastName" required=""0>
+                                <input type="text" name="lastName" required="" autocomplete="off">
                                 <label for="lastname">Last Name</label>
                             </div>
                             <div class="inputbox">
-                                <input type="text" name="email" required=""0 >
+                                <input type="text" name="email" required="" autocomplete="off" >
                                 <label for="email">Email</label>
                             </div>
                             <div class="inputbox">
@@ -97,5 +104,7 @@
                 </div>
                 </div>
             </div>
+
+           
     </body>
 </html>
