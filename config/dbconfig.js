@@ -1,4 +1,4 @@
 module.exports = {
-    uri : 'xxxx'
+    uri : 'xxxxx'
 
 };
