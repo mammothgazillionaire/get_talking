@@ -16,6 +16,7 @@
         middleware.init(app);
 
         app.get( '/', mainController.renderIndex);
+        app.get( '/me',middleware.isLoggedIn, mainController.renderProfile);
 
     }
 })(module.exports);

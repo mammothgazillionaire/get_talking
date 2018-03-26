@@ -6,13 +6,15 @@
 $(function(){
     $('#loginForm').on('submit', function(e) {
         e.preventDefault();
-
+console.log("here");
         var data =  $(this).serialize();
         document.getElementById("login-btn").disabled = true;
         document.getElementById("login-btn").style.background = "#ccc";
         $.post('/login', data, function(result) {
+            console.log("here1");
             if(result.valid == true) {
-                window.location.href = '/redirecting';
+                console.log("here2");
+                window.location.href = '/me';
             }
             else {
                 document.getElementById("login-btn").disabled = false;

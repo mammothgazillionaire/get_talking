@@ -57,20 +57,6 @@ module.exports = function(passport) {
                     }
                     // all is well, return user
                     else{
-                        req.session.updateDashboardFlag = false;
-                        if(user.defaultRole){
-                            user.activeRole = user.defaultRole;
-                        } else {
-                            user.defaultRole= 'Student';
-                            user.activeRole = user.defaultRole;
-                        }
-                        user.save(function (error,savedUser) {
-                            if (error){
-                                log.error(error)
-                            } else if(savedUser){
-                                log.info("saved active role for user "+ savedUser.email);
-                            }
-                        });
                         return done(null, user);
                     }
                 });
