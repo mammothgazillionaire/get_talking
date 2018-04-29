@@ -15,7 +15,13 @@
         exports.renderProfile = function (req,res) {
             res.render('./general/profile.ejs', {
                 title : "Get talking",
-                isLogged : false,
+                firstName : req.user.name.firstName
+            });
+        };
+
+        exports.renderChat = function (req,res) {
+            res.render('./chat/chat.ejs', {
+                title : "Get talking",
                 firstName : req.user.name.firstName
             });
         }

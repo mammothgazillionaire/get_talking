@@ -16,7 +16,9 @@
         middleware.init(app);
 
         app.get( '/', mainController.renderIndex);
+        app.get('/logout', authController.logOut);
         app.get( '/me',middleware.isLoggedIn, mainController.renderProfile);
+        app.get( '/chat',middleware.isLoggedIn, mainController.renderChat);
 
     }
 })(module.exports);

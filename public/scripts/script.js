@@ -28,7 +28,6 @@ console.log("here");
 // Signup
 $(function(){
     $('#registrationForm').on('submit', function(e) {
- close_button
         console.log("here");
        // e.preventDefault();
 

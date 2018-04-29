@@ -78,12 +78,14 @@ mongoose.connection.on('error',function (err) {
     console.log('Mongoose default connection error: ' + err);
 });
 
-
 // Start listening on the port
 var server = app.listen(port, function() {
     console.log('Listening on port %d', server.address().port);
 });
-
+var io = require('socket.io')(server);
+io.on('connection', function(socket){
+    console.log('a user connected');
+});
 
 // http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
 //     console.log('Express server listening on port ' + app.get('port'));
