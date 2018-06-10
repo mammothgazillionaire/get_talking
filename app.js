@@ -84,7 +84,13 @@ var server = app.listen(port, function() {
 });
 var io = require('socket.io')(server);
 io.on('connection', function(socket){
-    console.log('a user connected');
+    console.log(socket.id);
+    socket.on('chat message', function(msg){
+        io.emit('chat message', msg);
+    });
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+    });
 });
 
 // http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
